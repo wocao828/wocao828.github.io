@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wocao828.github.io/"/>
-  <updated>2018-12-03T07:20:25.403Z</updated>
+  <updated>2018-12-03T12:30:41.900Z</updated>
   <id>https://wocao828.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo github搭建个人博客</title>
+    <link href="https://wocao828.github.io/2018/12/03/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://wocao828.github.io/2018/12/03/hexo-github搭建个人博客/</id>
+    <published>2018-12-03T09:29:12.000Z</published>
+    <updated>2018-12-03T12:30:41.900Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:在Windows下使用hexo github搭建个人的博客</p><h2 id="安装配置node-js"><a href="#安装配置node-js" class="headerlink" title="安装配置node.js"></a>安装配置node.js</h2><h2 id="安装配置git"><a href="#安装配置git" class="headerlink" title="安装配置git"></a>安装配置git</h2><h2 id="注册一个github账号，新建一个项目，格式为项目名-github-io"><a href="#注册一个github账号，新建一个项目，格式为项目名-github-io" class="headerlink" title="注册一个github账号，新建一个项目，格式为项目名.github.io"></a>注册一个github账号，新建一个项目，格式为项目名.github.io</h2><h2 id="创建一个文件叫index-html-写入内容"><a href="#创建一个文件叫index-html-写入内容" class="headerlink" title="创建一个文件叫index.html,写入内容"></a>创建一个文件叫index.html,写入内容</h2><h2 id="在e盘创建一个blog文件夹"><a href="#在e盘创建一个blog文件夹" class="headerlink" title="在e盘创建一个blog文件夹"></a>在e盘创建一个blog文件夹</h2><h2 id="输入npm-install-g-hexo-cli安装hexo"><a href="#输入npm-install-g-hexo-cli安装hexo" class="headerlink" title="输入npm install -g hexo-cli安装hexo"></a>输入npm install -g hexo-cli安装hexo</h2><h2 id="输入hexo出现如下"><a href="#输入hexo出现如下" class="headerlink" title="输入hexo出现如下"></a>输入hexo出现如下</h2><h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><h2 id="输入hexo-generate"><a href="#输入hexo-generate" class="headerlink" title="输入hexo generate"></a>输入hexo generate</h2><h2 id="将blog用vscode打开，更改配置文件-config-yml中的title-author-language-url等配置项"><a href="#将blog用vscode打开，更改配置文件-config-yml中的title-author-language-url等配置项" class="headerlink" title="将blog用vscode打开，更改配置文件_config.yml中的title,author,language,url等配置项"></a>将blog用vscode打开，更改配置文件_config.yml中的title,author,language,url等配置项</h2><h2 id="输入hexo-server"><a href="#输入hexo-server" class="headerlink" title="输入hexo server"></a>输入hexo server</h2><h2 id="在浏览器中打开localhost-4000出现"><a href="#在浏览器中打开localhost-4000出现" class="headerlink" title="在浏览器中打开localhost:4000出现"></a>在浏览器中打开localhost:4000出现</h2><h2 id="更换一个主题-在theme下用git下载一个主题，git-clone-https-github-com-shuiRong-hexo-theme-Ada如下"><a href="#更换一个主题-在theme下用git下载一个主题，git-clone-https-github-com-shuiRong-hexo-theme-Ada如下" class="headerlink" title="更换一个主题:在theme下用git下载一个主题，git clone https://github.com/shuiRong/hexo-theme-Ada如下"></a>更换一个主题:在theme下用git下载一个主题，git clone <a href="https://github.com/shuiRong/hexo-theme-Ada如下" target="_blank" rel="noopener">https://github.com/shuiRong/hexo-theme-Ada如下</a></h2><h2 id="更改配置文件-config-yml下的theme"><a href="#更改配置文件-config-yml下的theme" class="headerlink" title="更改配置文件_config.yml下的theme"></a>更改配置文件_config.yml下的theme</h2><h2 id="输入hexo-clean"><a href="#输入hexo-clean" class="headerlink" title="输入hexo clean"></a>输入hexo clean</h2><p>输入hexo generate</p><p>输入hexo server</p><p>重新打开localhost:4000</p><h2 id="安装配置githubdesktop-输入github账号-然后create-repository，输入项目名，"><a href="#安装配置githubdesktop-输入github账号-然后create-repository，输入项目名，" class="headerlink" title="安装配置githubdesktop,输入github账号,然后create repository，输入项目名，"></a>安装配置githubdesktop,输入github账号,然后create repository，输入项目名，</h2><h2 id="将blog下public的所有文件复制到文档的github下面的项目名下面"><a href="#将blog下public的所有文件复制到文档的github下面的项目名下面" class="headerlink" title="将blog下public的所有文件复制到文档的github下面的项目名下面"></a>将blog下public的所有文件复制到文档的github下面的项目名下面</h2><h2 id="然后在githubdesktop下的summary和description写入东西-点commit-to-master"><a href="#然后在githubdesktop下的summary和description写入东西-点commit-to-master" class="headerlink" title="然后在githubdesktop下的summary和description写入东西,点commit to master"></a>然后在githubdesktop下的summary和description写入东西,点commit to master</h2><h2 id="然后点fetch-origin同步上去，最后输入https-项目名-出现如下"><a href="#然后点fetch-origin同步上去，最后输入https-项目名-出现如下" class="headerlink" title="然后点fetch origin同步上去，最后输入https://项目名,出现如下"></a>然后点fetch origin同步上去，最后输入https://项目名,出现如下</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:在Windows下使用hexo github搭建个人的博客&lt;/p&gt;
+&lt;h2 id=&quot;安装配置node-js&quot;&gt;&lt;a href=&quot;#安装配置node-js&quot; class=&quot;headerlink&quot; title=&quot;安装配置node.js&quot;&gt;&lt;/a&gt;安装配置node.js&lt;/
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>My New Post</title>
