@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wocao828.github.io/"/>
-  <updated>2018-12-06T08:37:09.653Z</updated>
+  <updated>2018-12-16T13:54:52.914Z</updated>
   <id>https://wocao828.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux基础50题</title>
+    <link href="https://wocao828.github.io/2018/12/16/linux%E5%9F%BA%E7%A1%8050%E9%A2%98/"/>
+    <id>https://wocao828.github.io/2018/12/16/linux基础50题/</id>
+    <published>2018-12-16T13:26:28.000Z</published>
+    <updated>2018-12-16T13:54:52.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:做了五十道linux题，对linux系统有了深入的了解。</p><ol><li>下面哪个Linux命令可以一次显示一页内容？(c)</li></ol><p>A. pause<br>B. cat<br>C. more<br>D. grep</p><p>2.统计当前目录(或文件)所占磁盘空间的大小命令是：(c)</p><p>A. df /<br>B. du /<br>C. du<br>D. df</p><ol start="5"><li>怎样更改一个文件的权限设置？(b)</li></ol><p>A. attrib<br>B. chmod<br>C. change<br>D. file</p><ol start="6"><li>假如您需要找出 /etc/my.conf 文件属于哪个包 (package) ，您可以执行：(b)</li></ol><p>A. rpm -q /etc/my.conf<br>B. rpm -requires /etc/my.conf<br>C. rpm -qf /etc/my.conf<br>D. rpm -q | grep /etc/my.conf</p><p>13.在使用了shadow口令的系统中，/etc/passwd和/etc/shadow两个文件的权限正确的是：(c)</p><p>A. -rw-r—– , -r——–<br>B. -rw-r–r– , -r–r–r–<br>C. -rw-r–r– , -r——–<br>D. -rw-r–rw- , -r—–r–</p><p>17．如果你的umask设置为022，缺省的你创建的文件的权限为：(d)</p><p>A. —-w–w-<br>B. -w–w—-<br>C. r-xr-x—<br>D. rw-r–r–</p><p>18．在一条命令中如何查找一个二进制命令 Xconfigurator 的路径？(d)</p><p>A. apropos Xconfigurator<br>B. find Xconfigurator<br>C. where Xconfigurator<br>D. which Xconfigurator</p><p>20．运行一个脚本，用户不需要什么样的权限？(b)</p><p>A. read<br>B. write<br>C. execute<br>D. browse on the directory</p><p>23．在 bash 中, 在一条命令后加入”1&gt;&amp;2” 意味着：(c)</p><p>A. 标准错误输出重定向到标准输入<br>B. 标准输入重定向到标准错误输出<br>C. 标准输出重定向到标准错误输出<br>D. 标准输出重定向到标准输入</p><p>24．下面哪条命令可以把f1.txt复制为f2.txt?(a)</p><p>A. cp f1.txt | f2.txt<br>B. cat f1.txt | f2.txt<br>C. cat f1.txt &gt; f2.txt<br>D. copy f1.txt | f2.txt</p><p>25．显示一个文件最后几行的命令是：(b)</p><p>A. tac<br>B. tail<br>C. rear<br>D. last</p><p>31.使用ln命令将生成了一个指向文件old的符号链接new，如果你将文件old删除，是否还能够访问文件中的数据？(a)</p><p>A. 不可能再访问<br>B. 仍然可以访问<br>C. 能否访问取决于文件的所有者<br>D. 能否访问取决于文件的权限</p><p>37.如何在文件中查找显示所有以”*”打头的行？(d)</p><p>A. find * file<br>B. wc -l <em> &lt; file<br>C. grep -n </em> file<br>D. grep ‘^*’ file</p><p>38.在ps命令中什么参数是用来显示所有用户的进程的？(a)</p><p>A. a<br>B. b<br>C. u<br>D. x</p><p>40.如何显示Linux系统中注册的用户数（包含系统用户）？(d)</p><p>A. account -l<br>B. nl /etc/passwd |head<br>C. wc –users /etc/passwd<br>D. wc –lines /etc/passwd</p><p>42.命令 kill 9 的含义是：(a)</p><p>A. kills the process whose PID is 9.<br>B. kills all processes belonging to UID 9.<br>C. sends SIGKILL to the process whose PID is 9.<br>D. sends SIGTERM to the process whose PID IS 9.</p><p>43.如何删除一个非空子目录/tmp？(b)</p><p>A. del /tmp/<em><br>B. rm -rf /tmp<br>C. rm -Ra /tmp/</em><br>D. rm -rf /tmp/*</p><p>48.在Linux系统中的脚本文件一般以什么开头？(b)</p><p>A. $/bin/sh<br>B. #!/bin/sh<br>C. use /bin/sh<br>D. set shell=/bin/sh</p><p>49.下面哪种写法表示如果cmd1成功执行，则执行cmd2命令？(a)</p><p>A. cmd1&amp;&amp;cmd2<br>B. cmd1|cmd2<br>C. cmd1;cmd2<br>D. cmd1||cmd2</p><p>51.Linux中，提供TCP/IP包过滤功能的软件叫什么？(c)</p><p>A. rarp<br>B. route<br>C. iptables<br>D. filter</p><p>53.在vi中退出不保存的命令是？(d)</p><p>A. :q<br>B. :w<br>C. :wq<br>D. :q!</p><p>55.使用什么命令检测基本网络连接？(a)</p><p>A. ping<br>B. route<br>C. netstat<br>D. ifconfig</p><p>56.下面哪个协议使用了二个以上的端口？(b)</p><p>A. telnet<br>B. FTP<br>C. ssh<br>D. HTTP</p><p>59.如何在Debian系统中安装rpm包？(d)</p><p>A. alien pkgname.rpm<br>B. dpkg –rpm pkgname.rpm<br>C. dpkg –alien pkgname.rpm<br>D. alien pkganme.rpm ; dpkg -i pkganme.deb<br>　<br>60.在安装软件时下面哪一步需要root权限？(d)</p><p>A. make<br>B. make deps<br>C. make config<br>D. make install</p><p>61.什么命令用来只更新已经安装过的rpm软件包？(b)</p><p>A. rpm -U <em>.rpm<br>B. rpm -F </em>.rpm<br>C. rpm -e <em>.rpm<br>D. rpm -q </em>.rpm</p><p>64.下面哪个命令可以压缩部分文件：(c)</p><p>A. tar -dzvf filename.tgz <em><br>B. tar -tzvf filename.tgz </em><br>C. tar -czvf filename.tgz <em><br>D. tar -xzvf filename.tgz </em></p><p>67.对于Apache服务器，提供的子进程的缺省的用户是：(d)</p><p>A. root<br>B. apached<br>C. httpd<br>D. nobody</p><p>69.apache的主配置文件是：(a)</p><p>A. httpd.conf<br>B. httpd.cfg<br>C. access.cfg<br>D. apache.conf</p><p>77.通过Makefile来安装已编译过的代码的命令是：(d)</p><p>A. make<br>B. install<br>C. make depend<br>D. make install</p><p>78.什么命令解压缩tar文件？(b)</p><p>A. tar -czvf filename.tgz<br>B. tar -xzvf filename.tgz<br>C. tar -tzvf filename.tgz<br>D. tar -dzvf filename.tgz</p><p>84.命令 netstat -a 停了很长时间没有响应，这可能是哪里的问题？(b)</p><p>A. NFS.<br>B. DNS.<br>C. NIS.<br>D. routing.</p><p>85.ping使用的协议是：(d)</p><p>A. TCP<br>B. UDP<br>C. SMB<br>D. ICMP</p><p>86.下面哪个命令不是用来查看网络故障的？(b)</p><p>A. ping<br>B. init<br>C. telnet<br>D. netstat</p><p>87.拨号上网使用的协议通常是：(a)</p><p>A. PPP<br>B. UUCP<br>C. SLIP<br>D. Ethernet</p><p>88.TCP/IP中，哪个协议是用来进行IP自动分配的？(c)</p><p>A. ARP<br>B. NFS<br>C. DHCP<br>D. DNS</p><p>90.下面哪个功能用来生成一个文件的校验码？(a)</p><p>A. md5<br>B. tar<br>C. crypt<br>D. md5sum</p><p>93.如何停止一台机器的telnet服务？(d)</p><p>A. Put NONE in /etc/telnet.allow<br>B. Put a line ‘ALL:ALL’ in /etc/hosts.deny<br>C. Comment the telnet entry in /etc/inittab<br>D. Comment the telnet entry in /etc/xinetd.conf</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:做了五十道linux题，对linux系统有了深入的了解。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下面哪个Linux命令可以一次显示一页内容？(c)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A. pause&lt;br&gt;B. cat&lt;br&gt;C. more&lt;br&gt;D. grep&lt;/p&gt;
+&lt;p&gt;2.统计
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>lamp环境搭建及应用</title>
