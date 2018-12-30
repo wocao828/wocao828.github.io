@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wocao828.github.io/"/>
-  <updated>2018-12-23T12:05:37.462Z</updated>
+  <updated>2018-12-30T06:17:21.595Z</updated>
   <id>https://wocao828.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新手搭建vpn</title>
+    <link href="https://wocao828.github.io/2018/12/30/%E6%96%B0%E6%89%8B%E6%90%AD%E5%BB%BAvpn/"/>
+    <id>https://wocao828.github.io/2018/12/30/新手搭建vpn/</id>
+    <published>2018-12-30T05:53:09.000Z</published>
+    <updated>2018-12-30T06:17:21.595Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:如何搭建vpn，本篇将具体阐述</p><h2 id="Windows服务器上搭建"><a href="#Windows服务器上搭建" class="headerlink" title="Windows服务器上搭建"></a>Windows服务器上搭建</h2><p>1.打开服务管理器—&gt;添加角色—-&gt;勾选“网络策略和访问服务 ”——&gt;下一步—–&gt;勾选”路由和远程访问服务”—&gt;开始安装</p><p>2.角色中出现了“路由和远程访问”，现在是红色的，右键选择配置它，打开向导—&gt;选择自定义配置–&gt;服务里全选–&gt;完成–&gt;变成绿色</p><p>3.新增一个接口：ipv4–&gt;NAT—&gt;新建一个接口–&gt;选择要使用的网卡—&gt;接口类型选择“公用接口连接到Internet”,勾选“在此接口上启用NAT“</p><p>4.开始菜单–&gt;管理工具–&gt;网络策略服务器–&gt;策略–&gt;网络策略–&gt;把里面的两项被组织的属性改成“授予访问权限”</p><p>5.服务器管理器–&gt;配置–&gt;本地用户和组–&gt;添加一个用户–&gt;填写用户名、密码、勾选“用户不能更改密码”和“密码永不过期”，去掉“下次登陆须更改密码”的勾，点创建。</p><p>6.开始菜单–&gt;管理工具–&gt;本地安全策略–&gt;本地策略–&gt;用户权限分配–&gt;拒绝本地登陆，添加vpn用户—&gt;拒绝通过远程桌面登陆,添加vpn用户。</p><p>7.连接VPN：在客户机创建一个新连接–&gt;选择连接到工作区—&gt;使用我的internet连接–&gt;填写ip地址–&gt;填写之前创建的VPN用户名和密码–&gt;连接即可</p><h2 id="linux服务器上搭建vpn-本次实验使用ubuntu16-04"><a href="#linux服务器上搭建vpn-本次实验使用ubuntu16-04" class="headerlink" title="linux服务器上搭建vpn(本次实验使用ubuntu16.04)"></a>linux服务器上搭建vpn(本次实验使用ubuntu16.04)</h2><h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><p>1.检查更新<br>sudo apt-get update</p><p>2.输入命令<br>sudo apt-get install \</p><p>apt-transport-https \</p><p>ca-certificates \</p><p>curl \</p><p>software-properties-common</p><p>3.curl -fsSL <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg</a> | sudo apt-key add -</p><p>4.sudo add-apt-repository \</p><p>“deb [arch=amd64] <a href="https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu</a> \</p><p>$(lsb_release -cs) \</p><p>stable”</p><p>5.sudo apt-get update</p><p>6.sudo apt-get install docker-ce</p><p>7.vim /etc/docker/daemon.json<br>写入{<br>        “registry-mirrors”: [“<a href="https://registry.docker-cn.com&quot;]" target="_blank" rel="noopener">https://registry.docker-cn.com&quot;]</a><br>    }</p><p>8.重启docker<br>service docker restart</p><h3 id="搭建PPTP模式vpn"><a href="#搭建PPTP模式vpn" class="headerlink" title="搭建PPTP模式vpn"></a>搭建PPTP模式vpn</h3><p>1.用docker拉镜像<br>docker pull mobtitude/vpn-pptp</p><p>2.新建chap-secrets，写入</p><p>uname     <em>     upass    </em></p><p>3.运行docker</p><p>docker run -d –privileged –net host -v /root/chap-secrets:/etc/ppp/chap-secrets mobtitude/vpn-pptp</p><h3 id="搭建L2TP模式"><a href="#搭建L2TP模式" class="headerlink" title="搭建L2TP模式"></a>搭建L2TP模式</h3><p>1.用docker拉镜像<br>docker pull hwdsl2/ipsec-vpn-server</p><p>2.modprobe af_key</p><p>3.编辑vpn.env</p><p>写入VPN_IPSEC_PSK=qwerdf</p><p>VPN_USER=vpnuser</p><p>VPN_PASSWORD=vpnpassword</p><p>docker run –name vpn-docker –privileged –env-file /root/vpn.env -p 500:500/udp -p 4500:4500/udp -v /lib/modules:/lib/modules:ro  -d –privileged hwdsl2/ipsec-vpn-server</p><h3 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h3><p>1.下载shadowsocks</p><p>apt install shadowsocks -y</p><p>2.修改配置文件/etc/shadowsocks/config.json</p><p>vim /etc/shadowsocks/config.json</p><p>{<br>    “server”:”0.0.0.0”,</p><p>  “server_port”:8888,</p><p>“local_address”: “127.0.0.1”,</p><p> “local_port”:1080,</p><p> “password”:”123456”,</p><p>“timeout”:300,</p><p> “method”:”aes-256-cfb”,</p><p> “fast_open”: false,</p><p>  “workers”: 1,</p><p> “prefer_ipv6”: false</p><p>}</p><p>3.service shadowsocks restart</p><p>4.客户端连接</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:如何搭建vpn，本篇将具体阐述&lt;/p&gt;
+&lt;h2 id=&quot;Windows服务器上搭建&quot;&gt;&lt;a href=&quot;#Windows服务器上搭建&quot; class=&quot;headerlink&quot; title=&quot;Windows服务器上搭建&quot;&gt;&lt;/a&gt;Windows服务器上搭建&lt;/h2&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>mysql基础学习</title>
