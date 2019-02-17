@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="yes" name="apple-touch-fullscreen"><meta content="telephone=no,email=no" name="format-detection"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"><link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"><script src="https://use.fontawesome.com/adaf0e149c.js"></script><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/monokai_sublime.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/post.css"><link rel="stylesheet" href="/css/markdown-github.css"><title>zhang's blog</title><script src="/js/googleAnalytics.js"></script></head><body><div id="postContainer"><div id="postTop"><h4 id="logo">Life Is Short</h4><br><br><h2 id="postTitle">xss与csrf</h2><br><span aria-hidden="true" class="postTime fa fa-calendar">2019-2-17</span><br><br></div><section id="articleDiv"><p></p><p>前言:xss与csrf主要是对用户产生危害，本次对它们进行初步学习</p><p></p>
+<p></p><h2 id="xss-跨站脚本攻击"><a href="#xss-跨站脚本攻击" class="headerlink" title="xss(跨站脚本攻击)"></a>xss(跨站脚本攻击)</h2><h4 id="xss产生两个条件"><a href="#xss产生两个条件" class="headerlink" title="xss产生两个条件"></a>xss产生两个条件</h4><h5 id="1-可以控制的输入点"><a href="#1-可以控制的输入点" class="headerlink" title="1.可以控制的输入点"></a>1.可以控制的输入点</h5><h5 id="2-输入能返回到前端页面被浏览器当成脚本语言执行"><a href="#2-输入能返回到前端页面被浏览器当成脚本语言执行" class="headerlink" title="2.输入能返回到前端页面被浏览器当成脚本语言执行"></a>2.输入能返回到前端页面被浏览器当成脚本语言执行</h5><h4 id="xss危害"><a href="#xss危害" class="headerlink" title="xss危害"></a>xss危害</h4><p>cookie劫持</p><p></p>
+<p></p><p>会话劫持</p><p></p>
+<p></p><p>键盘记录</p><p></p>
+<p></p><p>客户端信息探查</p><p></p>
+<p></p><p>网页挂马</p><p></p>
+<p></p><p>xss蠕虫</p><p></p>
+<p></p><h4 id="xss分类"><a href="#xss分类" class="headerlink" title="xss分类"></a>xss分类</h4><h5 id="反射性xss"><a href="#反射性xss" class="headerlink" title="反射性xss"></a>反射性xss</h5><h5 id="存储型xss"><a href="#存储型xss" class="headerlink" title="存储型xss"></a>存储型xss</h5><h5 id="dom型xss"><a href="#dom型xss" class="headerlink" title="dom型xss"></a>dom型xss</h5><h3 id="xss平台搭建"><a href="#xss平台搭建" class="headerlink" title="xss平台搭建"></a>xss平台搭建</h3><h4 id="beef搭建"><a href="#beef搭建" class="headerlink" title="beef搭建"></a>beef搭建</h4><h4 id="blue-lotus搭建"><a href="#blue-lotus搭建" class="headerlink" title="blue-lotus搭建"></a>blue-lotus搭建</h4><h3 id="xss过滤"><a href="#xss过滤" class="headerlink" title="xss过滤"></a>xss过滤</h3><h4 id="1-标签引号内过滤"><a href="#1-标签引号内过滤" class="headerlink" title="1.标签引号内过滤"></a>1.标签引号内过滤</h4><h4 id="2-尖括号内过滤"><a href="#2-尖括号内过滤" class="headerlink" title="2.尖括号内过滤"></a>2.尖括号内过滤</h4><h4 id="3-全局过滤"><a href="#3-全局过滤" class="headerlink" title="3.全局过滤"></a>3.全局过滤</h4><p>1.弹框函数alert(),prompt(),confirm()</p><p></p>
+<p></p><p>2.on事件</p><p></p>
+<p></p><p>3.JavaScript伪协议</p><p></p>
+<p></p><p>4.data协议 data://text/plain;base64,xxx</p><p></p>
+<p></p><p>5.外部js</p><p></p>
+<p></p><h4 id="xss测试"><a href="#xss测试" class="headerlink" title="xss测试"></a>xss测试</h4><p>在测试时，先单独发送一个&lt; 或 ‘ 或 “</p><p></p>
+<p></p><p>看一下网页源代码，有没有进行html实体编码</p><p></p>
+<p></p><p>如果没有，变形绕过</p><p></p>
+<p></p><p>如果有，无法绕过</p><p></p>
+<p></p><h4 id="xss变形"><a href="#xss变形" class="headerlink" title="xss变形"></a>xss变形</h4><p>1.大小写混合写</p><p></p>
+<p></p><p>2.改变标签</p><p></p>
+<p></p><p>3.加入空格</p><p></p>
+<p></p><p>4.加入特殊字</p><p></p>
+<p></p><p>5.使用其他属性</p><p></p>
+<p></p><p>6.利用事件绕过</p><p></p>
+<p></p><p>7.利用编码绕过</p><p></p>
+<p></p><h3 id="xss修复与防御"><a href="#xss修复与防御" class="headerlink" title="xss修复与防御"></a>xss修复与防御</h3><p>html实体化编码eq:htmlspecialchars()</p><p></p>
+<p></p><p>http-only</p><p></p>
+<p></p><h2 id="csrf-跨站伪造请求"><a href="#csrf-跨站伪造请求" class="headerlink" title="csrf(跨站伪造请求)"></a>csrf(跨站伪造请求)</h2><h4 id="csrf危害"><a href="#csrf危害" class="headerlink" title="csrf危害"></a>csrf危害</h4><h5 id="1-作为其他攻击的辅助手法"><a href="#1-作为其他攻击的辅助手法" class="headerlink" title="1.作为其他攻击的辅助手法"></a>1.作为其他攻击的辅助手法</h5><h5 id="2-传播蠕虫"><a href="#2-传播蠕虫" class="headerlink" title="2.传播蠕虫"></a>2.传播蠕虫</h5><h5 id="3-伪造http请求未授权操作"><a href="#3-伪造http请求未授权操作" class="headerlink" title="3.伪造http请求未授权操作"></a>3.伪造http请求未授权操作</h5><h4 id="csrf防御"><a href="#csrf防御" class="headerlink" title="csrf防御"></a>csrf防御</h4><h5 id="1-token验证"><a href="#1-token验证" class="headerlink" title="1.token验证"></a>1.token验证</h5><h5 id="2-referer验证"><a href="#2-referer验证" class="headerlink" title="2.referer验证"></a>2.referer验证</h5><h5 id="3-验证码验证"><a href="#3-验证码验证" class="headerlink" title="3.验证码验证"></a>3.验证码验证</h5><p></p>
+</section></div><script src="/js/jquery.min.js"></script><script src="/js/highlight.min.js"></script><script src="/js/start.js"></script></body></html>
