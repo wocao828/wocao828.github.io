@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wocao828.github.io/"/>
-  <updated>2019-02-23T14:02:19.676Z</updated>
+  <updated>2019-02-24T07:31:57.542Z</updated>
   <id>https://wocao828.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://wocao828.github.io/2019/02/23/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"/>
     <id>https://wocao828.github.io/2019/02/23/信息泄露与信息收集/</id>
     <published>2019-02-23T13:55:03.000Z</published>
-    <updated>2019-02-23T14:02:19.676Z</updated>
+    <updated>2019-02-24T07:31:57.542Z</updated>
     
-    <content type="html"><![CDATA[<p>前言:信息泄露可造成重大危害，而信息收集则是渗透测试的首要流程</p><h2 id="信息泄露-web方向"><a href="#信息泄露-web方向" class="headerlink" title="信息泄露(web方向)"></a>信息泄露(web方向)</h2><p>1.web服务器信息(类型，版本)<br>2.web应用信息(web脚本类型，数据库类型，cms，内容)<br>3.服务器操作系统信息(类型，版本)<br>4.服务器其他服务信息(服务，端口)<br>5.域名信息(子域名，ip地址，注册相关信息)<br>6.相关人员信息(注册域名相关人员信息)</p><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2>]]></content>
+    <content type="html"><![CDATA[<p>前言:信息泄露可造成重大危害，而信息收集则是渗透测试的首要流程</p><h2 id="信息泄露-web方向"><a href="#信息泄露-web方向" class="headerlink" title="信息泄露(web方向)"></a>信息泄露(web方向)</h2><p>1.web服务器信息(类型，版本)</p><p>2.web应用信息(web脚本类型，数据库类型，cms，内容)</p><p>3.服务器操作系统信息(类型，版本)</p><p>4.服务器其他服务信息(服务，端口)</p><p>5.域名信息(子域名，ip地址，注册相关信息)</p><p>6.相关人员信息(注册域名相关人员信息)</p><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="1-域名收集"><a href="#1-域名收集" class="headerlink" title="1.域名收集"></a>1.域名收集</h3><p>1.搜索引擎收集,google,baidu,bing,yahoo</p><p>查询网:<a href="http://site.ip138.com/" target="_blank" rel="noopener">http://site.ip138.com/</a></p><p>微步在线:<a href="https://x.threatbook.cn/" target="_blank" rel="noopener">https://x.threatbook.cn/</a></p><p>2.layer子域名挖掘机</p><p>3.主站爬取(vrossadmin.xml)</p><p>4.爬虫</p><p>5.解析记录收集(<a href="https://dnsdb.io/zh-cn/" target="_blank" rel="noopener">https://dnsdb.io/zh-cn/</a>)</p><p>6.https证书收集<br><img src="/2019/02/23/信息泄露与信息收集/1.png" alt="1"><br>7.常用工具收集(python2环境下)</p><p>Sublist3r:<a href="https://github.com/aboul3la/Sublist3r" target="_blank" rel="noopener">https://github.com/aboul3la/Sublist3r</a></p><p>subDomainsBrute:<a href="https://github.com/lijiejie/subDomainsBrute" target="_blank" rel="noopener">https://github.com/lijiejie/subDomainsBrute</a></p><p>wydomain:<a href="https://github.com/ring04h/wydomain" target="_blank" rel="noopener">https://github.com/ring04h/wydomain</a></p><h3 id="2-相关注册人信息收集"><a href="#2-相关注册人信息收集" class="headerlink" title="2.相关注册人信息收集"></a>2.相关注册人信息收集</h3><p>1.站长之家</p><p>2.<a href="https://www.benmi.com" target="_blank" rel="noopener">https://www.benmi.com</a></p><p>3.<a href="http://whois.bugscaner.com/" target="_blank" rel="noopener">http://whois.bugscaner.com/</a></p><h3 id="3-web应用信息收集"><a href="#3-web应用信息收集" class="headerlink" title="3.web应用信息收集"></a>3.web应用信息收集</h3><p>1.web中间件信息</p><p>通过response包查看server头信息</p><p>nmap -A</p><p>返回的404页面</p><p>2.脚本语言</p><p>3.cms</p><p>查看底部版权信息<br><img src="/2019/02/23/信息泄露与信息收集/2.png" alt="2"><br>robots.txt</p><p>whatweb</p><h3 id="4-服务器信息收集"><a href="#4-服务器信息收集" class="headerlink" title="4.服务器信息收集"></a>4.服务器信息收集</h3><p>1.操作系统信息</p><p>大小写判断</p><p>2.开发端口</p><p>nmap -O</p><h3 id="5-其他信息收集"><a href="#5-其他信息收集" class="headerlink" title="5.其他信息收集"></a>5.其他信息收集</h3><p>github信息泄露(源代码，运维脚本，配置文件)</p><p>管理员blog信息泄露(源代码，运维信息，服务器信息)</p><h3 id="记一次网站的信息收集过程"><a href="#记一次网站的信息收集过程" class="headerlink" title="记一次网站的信息收集过程"></a>记一次网站的信息收集过程</h3>]]></content>
     
     <summary type="html">
     
